@@ -1,0 +1,227 @@
+body{
+    background-color: #2E3F6D;
+    margin:0;
+    font-family: "losevka-charon";
+}
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; 
+}
+
+.cabecera{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.grupo-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+.nombre{
+    margin: 0;
+    font-size: 22px;
+    color:#FFFFFF;
+    font-weight: bold;
+}
+
+.boton {
+    margin-right: 20px;
+    background-color: #E5EDFA;
+    color: #2E3F6D;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+.contenido{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:60px;
+    margin-bottom: 80px;
+    gap: 40px;
+}
+
+.textos{
+    max-width: 55%;
+}
+
+.eslogan{
+    color:#FFFFFF;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.frase{
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.portada{
+    width: 450px;
+    border-radius: 16px;
+}
+
+.seccion{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.subtitulo-seccion{
+    color:#FFFFFF;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-funcionamiento{
+    flex:1;
+    background-color: #E5EDFA;
+    border-radius: 16px;
+    color:#2E3F6D;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.tarjeta-funcionamiento h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.tarjeta-funcionamiento p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.botones-sesion {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    justify-content: center;
+    background-color: #4A578B;
+    border-radius: 50px;
+    width: 350px;
+}
+
+.boton-iniciar {
+    background-color: #E5EDFA;
+    color: #2E3F6D;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+}
+
+.boton-crear {
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    flex: 1;
+}
+
+.formulario-sesion{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #E5EDFA;
+    border-radius: 20px;
+    width: 350px;
+    box-sizing: border-box;
+}
+
+.formulario-sesion label{
+    color: #2E3F6D;
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario-sesion input {
+    height: 50px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #BBD0ED;
+    padding: 0 15px;
+    outline: none;
+}
+
+.recupera-contrasena{
+    align-self: flex-end;
+    margin:0 0 10px 0;
+    background: none;
+    color: #2E3F6D;
+    padding: 0px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.selector-perfil {
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    color: #2E3F6D;
+    padding: 12px 15px;
+    border: 2px solid #BBD0ED;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.boton-ingresar{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    margin-top: 50px;
+    width: 350px;
+}
+
+.boton-ingresar button {
+    background-color: #BBD0ED;
+    color: #2E3F6D;
+    padding: 15px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.pantalla-oculta {
+    display: none !important;
+}
