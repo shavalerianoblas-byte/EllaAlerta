@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EllaAlerta — Seguridad Patrimonial</title>
+<link rel="icon" href="../imagen/logo.svg">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cobalto: '#2E3F6D',
+            lavanda: '#E5EDFA',
+            acento1: '#BBD0ED',
+            acento2: '#A2B7E4',
+            acento3: '#7187B9',
+            acento4: '#4A578B',
+            alertaRojo: '#D93A3A',
+            seguroVerde: '#1E8E5A',
+            alertaAmbar: '#D9822B'
+          },
+          fontFamily: {
+            charon: ['"Iosevka Charon"', '"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+</script>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-cobalto text-white antialiased selection:bg-acento1 selection:text-cobalto">
+<div id="app" class="min-h-screen flex flex-col"></div>
+<div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+<script src="../app.js"></script>
+<script src="seguridad.js"></script>
+</body>
+</html>

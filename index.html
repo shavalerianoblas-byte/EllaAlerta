@@ -1,121 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EllaAlerta</title>
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
-        <main>
-            <!-- Primera Pantalla (principal)-->
-            <section id="vista-principal">
-                
-                <!--Cabecera-->
-                <header class="cabecera">
-                    <div class="grupo-logo">
-                        <!--logo-->
-                        <img class="logo" src="/imagen/logo.png" alt="Logo de la aplicación">
-                        <!--nombre-->
-                        <p class="nombre">EllaAlerta</p>
-                    </div>
-                    <!--boton-->
-                    <button type="button" onclick="navegarA('inicio-sesion')" class="boton">Ingresar a la plataforma</button>
-                </header>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EllaAlerta — Protección Discreta y Red de Seguridad UPC</title>
+<link rel="icon" href="imagen/logo.svg">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cobalto: '#2E3F6D',
+            lavanda: '#E5EDFA',
+            acento1: '#BBD0ED',
+            acento2: '#A2B7E4',
+            acento3: '#7187B9',
+            acento4: '#4A578B',
+            alertaRojo: '#D93A3A',
+            seguroVerde: '#1E8E5A',
+            alertaAmbar: '#D9822B'
+          },
+          fontFamily: {
+            charon: ['"Iosevka Charon"', '"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+</script>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home-carousel.css">
+</head>
+<body class="bg-cobalto text-white antialiased selection:bg-acento1 selection:text-cobalto">
+<div id="app" class="min-h-screen flex flex-col"></div>
+<div id="stealth-overlay" class="hidden fixed inset-0 z-50 bg-[#0d1117] text-gray-300 p-6 flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between border-b border-gray-800 pb-4 mb-4">
+        <div class="flex items-center gap-2 text-gray-400">
+          <span class="material-symbols-outlined">edit_note</span>
+          <span class="font-semibold text-sm">Apuntes_Clase_Semana12.txt</span>
+        </div>
+        <button onclick="toggleSigilo()" class="text-xs px-3 py-1.5 rounded-lg bg-gray-800 text-gray-400 hover:text-white">
+          Restaurar vista
+        </button>
+      </div>
+      <div class="space-y-3 text-sm leading-relaxed text-gray-400 font-mono">
+        <p># Arquitectura de Información y Usabilidad Móvil</p>
+        <p>- Sistemas de organización: jerárquica, secuencial y matricial.</p>
+        <p>- Regla del pulgar en dispositivos móviles (tercio inferior de pantalla).</p>
+        <p>- Contraste mínimo WCAG AA 4.5:1 para lectura en exteriores.</p>
+        <p class="text-gray-600 pt-4">[Mantén presionado el botón inferior 2s para enviar alerta silenciosa]</p>
+      </div>
+    </div>
+    <div class="flex items-center justify-between pt-4 border-t border-gray-800">
+      <span class="text-xs text-gray-500">Guardado automático · Modo lectura nocturna</span>
+      <button onpointerdown="startSosHold()" onpointerup="cancelSosHold()" onpointerleave="cancelSosHold()" class="px-4 py-3 rounded-xl bg-gray-900 border border-gray-700 text-gray-400 text-xs active:bg-red-950 active:text-red-200">
+        Sincronizar nota (mantener 2s)
+      </button>
+    </div>
+  </div>
 
-                <div class="contenedor">
-                    <div class="contenido">
-                        <div class="textos">
-                            <!---Eslogan-->
-                            <h2 class="eslogan">Tu seguridad y tranquilidad son nuestra prioridad</h2>
-                            <!--Frace-->
-                            <p class="frase">Protección discreta que te acompaña en tus trayectos nocturnos al campus</p>
-                        </div>
-                        <!--Imagen-->
-                        <img class="portada" src="/imagen/portada.jpg" alt="portada">
-                    </div>
-
-                    <!--Funcionamiento-->
-                    <section id="como-funciona">
-                        <h3 class="subtitulo-seccion">Cómo funciona</h3>
-                        <div class="seccion">
-                            <article class="tarjeta-funcionamiento">
-                                <h4>1. Alerta encubierta</h4>
-                                <p>Pide ayuda sin llamar la atención</p>
-                            </article>
-                            <article class="tarjeta-funcionamiento">
-                                <h4>2. Ruta iluminada</h4>
-                                <p>Elige un camino más seguro</p>
-                            </article>
-                            <article class="tarjeta-funcionamiento">
-                                <h4>3. Red de confianza</h4>
-                                <p>Comparte tu trayecto con los tuyos</p>
-                            </article>
-                        </div>
-                    </section>
-
-                    <!-- Beneficios -->
-                    <section id="beneficios">
-                        <h3 class="subtitulo-seccion">Beneficios</h3>
-                        <div class="seccion">
-                            <article class="tarjeta-funcionamiento">
-                                <h4>Estudiantes</h4>
-                                <p>Llega con más tranquilidad</p>
-                            </article>
-                            <article class="tarjeta-funcionamiento">
-                                <h4>Red de confianza</h4>
-                                <p>Acompaña sus trayectos</p>
-                            </article>
-                            <article class="tarjeta-funcionamiento">
-                                <h4>Seguridad patrimonial</h4>
-                                <p>Coordina una respuesta ágil</p>
-                            </article>
-                        </div>
-                    </section>
-                </div>
-            </section>
-
-            <!--Segunda pantalla (inicio de sesión)-->
-            <section id="inicio-sesion" class="pantalla-oculta">
-                <!--Cabecera-->
-                <header class="cabecera">
-                    <div class="grupo-logo">
-                        <!--logo-->
-                        <img class="logo" src="/imagen/logo.png" alt="Logo de la aplicación">
-                        <!--nombre-->
-                        <p class="nombre">EllaAlerta</p>
-                    </div>
-                </header>
-
-                <div class="contenedor">
-                    <nav class="botones-sesion">
-                        <button type="button" onclick="navegarA('inicio-sesion')" class="boton-iniciar">Iniciar Sesión</button>
-                        <button type="button" onclick="navegarA('crear-cuenta')" class="boton-crear">Crear Cuenta</button>
-                    </nav>
-                    
-                    <form class="formulario-sesion">
-                        <label for="correo">Correo electrónico:</label>
-                        <input type="email" id="correo" name="correo" required placeholder="u202xxxxxx@upc.edu.pe">
-
-                        <label for="contrasena">Contraseña:</label>
-                        <input type="password" id="contrasena" name="contrasena" required placeholder="********">
-
-                        <button type="button" onclick="navegarA('recuperar-clave')" class="recupera-contrasena">¿Olvidaste tu contraseña?</button>
-
-                        <label for="perfil">Perfil:</label>
-                        <select id="perfil" class="selector-perfil" required>
-                            <option value="estudiante" selected>Estudiante</option>
-                            <option value="red_apoyo">Red de Apoyo</option>
-                            <option value="seguridad">Seguridad Patrimonial</option>
-                        </select>
-                    </form>
-
-                    <div class="boton-ingresar">
-                        <button type="button" onclick="navegarA('menu-estudiante')">Ingresar</button>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <script src="app.js"></script>
-    </body>
+  <div id="toast-container" class="fixed top-4 right-4 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+<script src="app.js"></script>
+<script src="inicio.js"></script>
+</body>
 </html>

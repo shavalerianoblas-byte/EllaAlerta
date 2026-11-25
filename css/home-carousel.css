@@ -1,0 +1,80 @@
+.landing-carousel-section {
+  width: 100%;
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.landing-carousel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.landing-carousel-track {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 0.5rem 0.25rem 1.25rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.landing-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.landing-carousel-card {
+  flex: 0 0 calc(50% - 0.75rem);
+  min-height: 10rem;
+  scroll-snap-align: start;
+}
+
+.landing-carousel-arrow {
+  display: inline-flex;
+  flex: 0 0 2.75rem;
+  width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(187, 208, 237, 0.45);
+  border-radius: 0.75rem;
+  background: rgba(74, 87, 139, 0.55);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.landing-carousel-arrow:hover {
+  background: #7187b9;
+}
+
+.landing-carousel-arrow:active {
+  transform: scale(0.96);
+}
+
+.landing-carousel-arrow:focus-visible {
+  outline: 3px solid #bbd0ed;
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .landing-carousel-card {
+    flex-basis: 88%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-carousel-track {
+    scroll-behavior: auto;
+  }
+
+  .landing-carousel-arrow {
+    transition: none;
+  }
+}

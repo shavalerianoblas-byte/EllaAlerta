@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+/* Copia tus .ttf de Iosevka Charon en la carpeta /fonts */
+@font-face{font-family:'Iosevka Charon';src:local('Iosevka Charon'),url('../fonts/IosevkaCharon-Regular.ttf');font-weight:400;font-style:normal}
+@font-face{font-family:'Iosevka Charon';src:local('Iosevka Charon Medium'),url('../fonts/IosevkaCharon-Medium.ttf');font-weight:500;font-style:normal}
+@font-face{font-family:'Iosevka Charon';src:local('Iosevka Charon Bold'),url('../fonts/IosevkaCharon-Bold.ttf');font-weight:700;font-style:normal}
+=======
 @font-face {
     font-family: "losevka-charon";
     src: url(fonts/IosevkaCharon-Regular.ttf) format("truetype");
 }
+>>>>>>> d38c24b3d237fd8765a39828df4336390467621b
